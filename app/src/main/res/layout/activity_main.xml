@@ -1,62 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/back"
+    android:background="@drawable/fundo"
+    android:padding="15dp"
     >
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tolbar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EU criei uma toobal"
+            ></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
+        android:id="@+id/txtlogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:layout_marginBottom="150dp"
         android:text="Bandio"
+        android:textColor="@color/branco"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textSize="40dp"></TextView>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
+        android:textSize="40dp"
+        ></TextView>
 
     <ImageView
+
+        android:id="@+id/bonequinho_fig"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_person_outline_black_24dp"
         android:layout_marginTop="10dp"
-        >
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/txtlogo"
+        ></ImageView>
 
-    </ImageView>
     <EditText
+        android:id="@+id/txtnome"
+        android:layout_below="@+id/txtlogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
         android:textColorHint="@color/branco"
+        android:layout_toRightOf="@id/bonequinho_fig"
         ></EditText>
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
     <ImageView
+        android:id="@+id/chave_fig"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_vpn_key_black_24dp"
-        android:layout_marginTop="10dp"> </ImageView>
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/bonequinho_fig"
+
+        > </ImageView>
 
     <EditText
+        android:drawableRight="@drawable/ic_help_outline_black_24dp"
+        android:id="@+id/txtsenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:textColorHint="@color/branco"
+        android:layout_toRightOf="@id/chave_fig"
+        android:layout_below="@id/txtnome"
         ></EditText>
-    </LinearLayout>
+
+    <ImageButton
+        android:layout_marginTop="40dp"
+        android:id="@+id/btnEntrar"
+        android:layout_marginLeft="80dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtsenha"
+        android:background="@drawable/botao"
+        android:src="@drawable/ic_exit_to_app_black_24dp"
+        ></ImageButton>
+
+    <TextView
+        android:id="@+id/txttextinho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEntrar"
+        android:layout_marginTop="40dp"
+        android:text="Don't have an account? Sign up"
+        android:textColor="@color/branco"
+        android:textSize="16sp"
+        android:layout_marginLeft="80dp"
+
+        ></TextView>
 
 
-</LinearLayout>
+
+
+
+</RelativeLayout>
